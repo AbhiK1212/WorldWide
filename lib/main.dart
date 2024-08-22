@@ -5,7 +5,7 @@ import 'package:world_wide/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
@@ -24,13 +24,7 @@ class _AppState extends State<App> {
       future: _initialization,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return MaterialApp(
-            home: Scaffold(
-              body: Center(
-                child: Text('Error: ${snapshot.error}'),
-              ),
-            ),
-          );
+          return const Text('error');
         }
 
         if (snapshot.connectionState == ConnectionState.done) {
@@ -40,13 +34,7 @@ class _AppState extends State<App> {
           );
         }
 
-        return const MaterialApp(
-          home: Scaffold(
-            body: Center(
-              child: Text('Loading...'),
-            ),
-          ),
-        );
+        return const Text('loading');
       },
     );
   }

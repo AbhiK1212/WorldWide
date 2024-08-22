@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:world_wide/services/auth.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+  const Profile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile'),
+      ),
+      body: ElevatedButton(
+        child: Text('signout'),
+        //Async because we are waiting for the signout to complete
+        onPressed: () async {
+          //await signout from AuthService
+          await AuthService().signOut();
+          //navigate to home and remove all routes
+          Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false);
+        }
+      )
+    );
   }
 }
