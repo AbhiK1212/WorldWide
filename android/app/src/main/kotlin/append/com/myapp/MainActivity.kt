@@ -1,4 +1,4 @@
-package append.com.myapp
+package com.WorldWide
 
 import io.flutter.embedding.android.FlutterActivity
 

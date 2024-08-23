@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
             //if not authenticated, show Login
             return const Login();
           }
-        },t
+        },
     );
   }
 }

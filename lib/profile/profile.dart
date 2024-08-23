@@ -8,10 +8,10 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body: ElevatedButton(
-        child: Text('signout'),
+        child: const Text('signout'),
         //Async because we are waiting for the signout to complete
         onPressed: () async {
           //await signout from AuthService
