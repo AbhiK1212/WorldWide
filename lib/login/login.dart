@@ -25,8 +25,20 @@ class Login extends StatelessWidget {
                 text: 'Continue as Guest',
                 loginMethod: AuthService().anonLogin,
                 color: Colors.deepPurple,
-              )
-            )
+              ),
+            ),
+            LogInButton(
+              text: 'Sign in with Google',
+              icon: FontAwesomeIcons.google,
+              color: Colors.blue,
+              loginMethod: AuthService().googleSignIn,
+            ),
+            LogInButton(
+              text: 'Sign in with Apple',
+              icon: FontAwesomeIcons.apple,
+              color: Colors.black,
+              loginMethod: AuthService().signInWithApple,
+            ),
           ],
         ),
       ),

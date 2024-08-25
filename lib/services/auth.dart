@@ -63,7 +63,6 @@ class AuthService{
   }
 
 //Apple Firebase Login
-
 // Generates a cryptographically secure random nonce, to be included in a
 // credential request.
 String generateNonce([int length = 32]) {
