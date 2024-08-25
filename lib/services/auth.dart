@@ -1,5 +1,3 @@
-// ignore_for_file: unused_catch_clause, prefer_const_declarations
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -63,6 +61,7 @@ class AuthService{
   }
 
 //Apple Firebase Login
+
 // Generates a cryptographically secure random nonce, to be included in a
 // credential request.
 String generateNonce([int length = 32]) {
@@ -107,6 +106,5 @@ Future<UserCredential> signInWithApple() async {
   // not match the nonce in `appleCredential.identityToken`, sign in will fail.
   return await FirebaseAuth.instance.signInWithCredential(oauthCredential);
 }
-
 
 }
