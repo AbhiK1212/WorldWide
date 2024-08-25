@@ -31,4 +31,4 @@ A Flutter-based mobile application that challenges users to identify locations a
 ...
 ---
 
-Built as a learning project to explore advanced Flutter concepts and Firebase integration. Inspired by popular quiz apps like Duolingo and QuizUp.
+Built as a learning project to explore advanced Flutter concepts and Firebase integration. Inspired by popular apps like Duolingo and GeoGuesser.
