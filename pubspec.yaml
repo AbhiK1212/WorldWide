@@ -22,8 +22,8 @@ dependencies:
   font_awesome_flutter: 10.1.0
   google_fonts: ^5.1.0  # or the latest version available
   # provider: 6.0.3
-  # rxdart: 0.27.4
-  # json_annotation: 4.5.0
+  rxdart: ^1.0.0
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
@@ -31,8 +31,8 @@ dev_dependencies:
 
   flutter_lints: ^1.0.0
 
-  # build_runner: 2.1.11
-  # json_serializable: 6.2.0
+  build_runner: ^2.4.1
+  json_serializable: ^6.8.0
 
 flutter:
   uses-material-design: true
