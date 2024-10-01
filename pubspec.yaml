@@ -21,7 +21,7 @@ dependencies:
   crypto: 3.0.1
   font_awesome_flutter: 10.1.0
   google_fonts: ^5.1.0  # or the latest version available
-  # provider: 6.0.3
+  provider: 6.0.3
   rxdart: ^0.27.2
   json_annotation: ^4.9.0
 
@@ -38,7 +38,6 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - assets/
-  #   - assets/covers/
-  #   - assets/congrats.gif
+  assets:
+    - assets/
+    - assets/topic_thumbnails/
