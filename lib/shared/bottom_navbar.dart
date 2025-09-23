@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Temporarily disabled
 
 class BottomNavbar extends StatelessWidget {
   const BottomNavbar({super.key});
@@ -10,7 +10,7 @@ class BottomNavbar extends StatelessWidget {
       items: const[
       BottomNavigationBarItem(
         icon: Icon(
-          FontAwesomeIcons.graduationCap,
+          Icons.school,
           size: 20,
         ),
         label: 'Topics',
@@ -18,7 +18,7 @@ class BottomNavbar extends StatelessWidget {
 
       BottomNavigationBarItem(
         icon: Icon(
-          FontAwesomeIcons.bolt,
+          Icons.flash_on,
           size: 20,
         ),
         label: 'Profile',
@@ -26,7 +26,7 @@ class BottomNavbar extends StatelessWidget {
 
       BottomNavigationBarItem(
         icon: Icon(
-          FontAwesomeIcons.circleUser,
+          Icons.person,
           size: 20,
         ),
         label: 'Profile',

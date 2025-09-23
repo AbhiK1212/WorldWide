@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:world_wide/services/auth.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {

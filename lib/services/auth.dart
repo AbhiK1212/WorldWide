@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -11,10 +12,21 @@ import 'dart:math';
 class AuthService{
 
   // User can authenticate whenever, hence a stream
-  final usersStream = FirebaseAuth.instance.authStateChanges();
+  Stream<User?> get usersStream {
+    if (kIsWeb) {
+      // Return a stream with null user for web (no auth for now)
+      return Stream.value(null);
+    }
+    return FirebaseAuth.instance.authStateChanges();
+  }
 
   // Check user authentication status in specific moment
-  final user = FirebaseAuth.instance.currentUser;
+  User? get user {
+    if (kIsWeb) {
+      return null; // No auth on web for now
+    }
+    return FirebaseAuth.instance.currentUser;
+  }
 
   //Anonymous Firebase Login
   //Return void future as it is not returning anything through async function
@@ -23,7 +35,7 @@ class AuthService{
     try{
       //Sign in anonymously
       await FirebaseAuth.instance.signInAnonymously();
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       //handle error
     }
   }
@@ -55,7 +67,7 @@ class AuthService{
 
       //Sign in with firebase credential
       await FirebaseAuth.instance.signInWithCredential(authCredential);
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       //handle error
     }
   }
@@ -65,7 +77,7 @@ class AuthService{
 // Generates a cryptographically secure random nonce, to be included in a
 // credential request.
 String generateNonce([int length = 32]) {
-  final charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
+  const charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
   final random = Random.secure();
   return List.generate(length, (_) => charset[random.nextInt(charset.length)])
       .join();

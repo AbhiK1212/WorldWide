@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Temporarily disabled
 import 'package:world_wide/services/auth.dart';
 
 class Login extends StatelessWidget {
@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
             //Flexible widget to allow for multiple buttons
             Flexible(
               child: LogInButton(
-                icon: FontAwesomeIcons.userNinja,
+                icon: Icons.person,
                 text: 'Continue as Guest',
                 loginMethod: AuthService().anonLogin,
                 color: Colors.deepPurple,
@@ -29,13 +29,13 @@ class Login extends StatelessWidget {
             ),
             LogInButton(
               text: 'Sign in with Google',
-              icon: FontAwesomeIcons.google,
+              icon: Icons.login,
               color: Colors.blue,
               loginMethod: AuthService().googleSignIn,
             ),
             LogInButton(
               text: 'Sign in with Apple',
-              icon: FontAwesomeIcons.apple,
+              icon: Icons.apple,
               color: Colors.black,
               loginMethod: AuthService().signInWithApple,
             ),
@@ -55,12 +55,11 @@ class LogInButton extends StatelessWidget {
 
   //constructor
   const LogInButton(
-    {Key? key,
+    {super.key,
     required this.color,
     required this.icon,
     required this.text,
-    required this.loginMethod})
-    : super(key: key);
+    required this.loginMethod});
 
   @override
   Widget build(BuildContext context) {

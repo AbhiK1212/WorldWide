@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
+// Web-safe theme without external dependencies
 var appTheme = ThemeData(
-  fontFamily: GoogleFonts.nunito().fontFamily,
+  // Use system default font for web compatibility
+  fontFamily: null, // Let Flutter choose the best font for the platform
   bottomAppBarTheme: const BottomAppBarTheme(
     color: Colors.black87,
   ),
   brightness: Brightness.dark,
+  primarySwatch: Colors.deepPurple,
   textTheme: const TextTheme(
     bodyLarge: TextStyle(fontSize: 18),
     bodyMedium: TextStyle(fontSize: 16),

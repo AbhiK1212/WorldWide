@@ -59,7 +59,7 @@ class TopicScreen extends StatelessWidget {
   final Topic topic;
 
 
-  const TopicScreen({Key? key,required this.topic}) : super(key: key);
+  const TopicScreen({super.key,required this.topic});
 
   @override
   Widget build(BuildContext context) {
