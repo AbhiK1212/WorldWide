@@ -2,6 +2,9 @@
 
 WorldWide is a cross-platform quiz application built with Flutter and Firebase. It features interactive, geography-based picture quizzes with real-time scoring and user progress tracking.
 
+## Demo
+Coming soon!
+
 ## Features
 
 - **Picture-Based Quizzes:** Interactive multiple-choice questions using real-world images of landmarks, cities, and locations
